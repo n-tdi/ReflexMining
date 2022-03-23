@@ -1,0 +1,7 @@
+name: RM
+version: '${project.version}'
+main: world.ntdi.rm.RM
+api-version: 1.18
+prefix: [ ReflexMining ]
+authors: [ Ntdi, rownox ]
+description: Reflex Mining game!
