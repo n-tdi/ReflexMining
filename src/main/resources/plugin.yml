@@ -5,3 +5,9 @@ api-version: 1.18
 prefix: [ ReflexMining ]
 authors: [ Ntdi, rownox ]
 description: Reflex Mining game!
+commands:
+  rm:
+    aliases:
+      - reflexmining
+      - refmin
+    usage: /rm
