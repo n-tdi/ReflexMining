@@ -35,12 +35,8 @@ public class CommandManager implements CommandExecutor {
                 sender.sendMessage(recolored + sep + desc);
             }
             sender.sendMessage(); sender.sendMessage(ChatColor.DARK_GRAY + "---------------------------------------------");
-        }
-
-        return true;
+        } return true;
     }
 
-    public ArrayList<SubCommand> getSubcommands(){
-        return subCommands;
-    }
+    public ArrayList<SubCommand> getSubcommands(){ return subCommands; }
 }
