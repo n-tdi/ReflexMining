@@ -33,6 +33,7 @@ public final class RM extends JavaPlugin {
         gameLogic = new GameLogic();
 
         getCommand("rm").setExecutor(new CommandManager());
+        getServer().getPluginManager().registerEvents(new GameLogic(), this);
         Bukkit.getLogger().info("RM is enabled!");
     }
 

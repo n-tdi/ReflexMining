@@ -49,7 +49,7 @@ public class GameLogic implements Listener {
             if (dist < 4) {
                 long finishTime = System.currentTimeMillis();
                 long time = finishTime - miner.getStartTime();
-                e.getPlayer().sendMessage("You finished in " + time + "ms");
+                e.getPlayer().sendMessage("You finished in " + time + "ms with a height of " + miner.getAmount());
                 RM.miners.remove(e.getPlayer());
                 e.getPlayer().getInventory().clear();
             }
