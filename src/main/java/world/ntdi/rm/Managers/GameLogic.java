@@ -37,7 +37,7 @@ public class GameLogic implements Listener {
         for (ItemStack item : items) {
             p.getInventory().addItem(item);
         }
-        p.teleport(new Location(miner.getStart().getWorld(), miner.getStart().getX(), miner.getStart().getY() + 4 + amount, miner.getStart().getZ(), 0, -90));
+        p.teleport(new Location(miner.getStart().getWorld(), miner.getStart().getX(), miner.getStart().getY() + 4 + amount, miner.getStart().getZ(), 0, 90));
         
     }
 
@@ -49,7 +49,8 @@ public class GameLogic implements Listener {
             if (dist < 4) {
                 long finishTime = System.currentTimeMillis();
                 long time = finishTime - miner.getStartTime();
-                e.getPlayer().sendMessage("You finished in " + time + "ms with a height of " + miner.getAmount());
+                int timeInSeconds = (int) (time / 1000);
+                e.getPlayer().sendMessage("You finished in " + timeInSeconds + "ms with a height of " + miner.getAmount());
                 RM.miners.remove(e.getPlayer());
                 e.getPlayer().getInventory().clear();
             }

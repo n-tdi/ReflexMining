@@ -25,22 +25,19 @@ public class StartCMD extends SubCommand {
     @Override
     public void perform(CommandSender sender, String[] args) {
         if (sender instanceof Player p) {
+            Bukkit.broadcastMessage(args.toString());
             if (args.length == 1) {
-                if (!RM.miners.containsKey(p)) {
-                    if (Bukkit.getPlayer(args[0]) != null) {
-                        Player target = Bukkit.getPlayer(args[0]);
-                        if (!RM.miners.containsKey(target)) {
-                            RM.gameLogic.startGame(target, 50);
-                        }
+                if (Bukkit.getPlayer(args[0]) != null) {
+                    Player target = Bukkit.getPlayer(args[0]);
+                    if (!RM.miners.containsKey(target)) {
+                        RM.gameLogic.startGame(target, 50);
                     }
                 }
             } else if (args.length == 2) {
-                if (!RM.miners.containsKey(p)) {
-                    if (Bukkit.getPlayer(args[0]) != null) {
-                        Player target = Bukkit.getPlayer(args[0]);
-                        if (!RM.miners.containsKey(target)) {
-                            RM.gameLogic.startGame(target, Integer.parseInt(args[1]));
-                        }
+                if (Bukkit.getPlayer(args[0]) != null) {
+                    Player target = Bukkit.getPlayer(args[0]);
+                    if (!RM.miners.containsKey(target)) {
+                        RM.gameLogic.startGame(target, Integer.parseInt(args[1]));
                     }
                 }
             } else {
