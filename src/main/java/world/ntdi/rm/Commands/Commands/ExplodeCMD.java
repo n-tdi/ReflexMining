@@ -28,7 +28,7 @@ public class ExplodeCMD extends SubCommand {
     public void perform(CommandSender sender, String[] args) {
         if (RM.hasPerm(sender, "rm.explode")) {
             if (args.length > 1) {
-                Player target = Bukkit.getPlayer(args[1]);
+                Player target = Bukkit.getPlayer(args[0]);
                 if (target != null) {
                     sender.sendMessage("You successfully exploded " + target.getDisplayName());
 
