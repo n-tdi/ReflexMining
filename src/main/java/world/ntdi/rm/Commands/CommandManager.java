@@ -5,6 +5,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import world.ntdi.rm.Commands.Commands.ExplodeCMD;
+import world.ntdi.rm.Commands.Commands.StartCMD;
 import world.ntdi.rm.RM;
 
 import java.util.ArrayList;
@@ -14,6 +15,7 @@ public class CommandManager implements CommandExecutor {
 
     public CommandManager(){
         subCommands.add(new ExplodeCMD());
+        subCommands.add(new StartCMD());
     }
 
     @Override
