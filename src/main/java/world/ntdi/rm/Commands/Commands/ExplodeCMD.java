@@ -27,7 +27,7 @@ public class ExplodeCMD extends SubCommand {
     @Override
     public void perform(CommandSender sender, String[] args) {
         if (RM.hasPerm(sender, "rm.explode")) {
-            if (args.length > 1) {
+            if (args.length >= 1) {
                 Player target = Bukkit.getPlayer(args[0]);
                 if (target != null) {
                     sender.sendMessage("You successfully exploded " + target.getDisplayName());
@@ -36,7 +36,7 @@ public class ExplodeCMD extends SubCommand {
                     target.getWorld().playEffect(target.getLocation(), Effect.SMOKE, 1);
                     target.setHealth(0);
                 } else { sender.sendMessage("Player not found"); }
-            } else if (args.length == 1) { sender.sendMessage("/rm explode " + sender.getName()); }
+            } else { sender.sendMessage("/rm explode " + sender.getName()); }
         } else { sender.sendMessage("You don't have permission to use this command"); }
     }
 }
